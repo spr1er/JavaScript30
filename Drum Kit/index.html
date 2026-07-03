@@ -9,11 +9,11 @@
     <title>Drum Kit</title>
   </head>
   <body>
-    <header class="header">
+    <header class="header flex">
       <a href="/" class="header__link">
         <h1 class="link__title">Drum Kit</h1>
       </a>
-      <ul class="header__list">
+      <ul class="header__list flex">
         <li class="header__item">
           <a href="https://github.com/spr1er" class="item__link">GitHub</a>
         </li>
@@ -23,29 +23,7 @@
       </ul>
     </header>
     <main class="main">
-      <ul class="drum__list">
-        <li class="drum__item">
-          <button class="drum__item-btn">
-            <h2 class="drum__item-title">P</h2>
-            <p class="drum__item-paragraph">sound 1</p>
-          </button>
-					<audio src="./assets/sounds/boom.wav"></audio>
-        </li>
-        <li class="drum__item">
-          <button class="drum__item-btn">
-            <h2 class="drum__item-title">P</h2>
-            <p class="drum__item-paragraph">sound 1</p>
-          </button>
-					<audio src="./assets/sounds/boom.wav"></audio>
-        </li>
-        <li class="drum__item">
-          <button class="drum__item-btn">
-            <h2 class="drum__item-title">P</h2>
-            <p class="drum__item-paragraph">sound 1</p>
-          </button>
-					<audio src="./assets/sounds/boom.wav"></audio>
-        </li>
-      </ul>
+      <ul id="drum-list" class="drum__list flex"></ul>
     </main>
     <script src="./js/index.js"></script>
   </body>
