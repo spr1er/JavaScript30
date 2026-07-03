@@ -1,0 +1,155 @@
+@font-face {
+  font-family: "Montserrat";
+  src: url("../assets/fonts/Montserrat/Montserrat-Regular.woff2")
+    format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Montserrat";
+  src: url("../assets/fonts/Montserrat/Montserrat-Medium.woff2") format("woff2");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Montserrat";
+  src: url("../assets/fonts/Montserrat/Montserrat-Bold.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+:root {
+  --border-radius: 1rem;
+  --transition-duration: 0.2s;
+
+	--color-bg: #2c2c2c;
+  --color-text: #000000;
+	--color-link: #ffffff;
+	--color-bg-btn: #ecd500;
+
+  --font-sans: "Montserrat", sans-serif;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  color: var(--color-text);
+  font-family: var(--font-sans);
+	background-color: var(--color-bg);
+}
+
+a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-link);
+  text-decoration: none;
+  transition-duration: var(--transition-duration);
+}
+
+a:hover {
+ color: var(--color-bg-btn);
+}
+
+button {
+	cursor: pointer;
+	padding: 0;
+  border: none;
+  color: var(--color-text);
+	transition-duration: var(--transition-duration);
+}
+
+button:hover {
+	background-color: var(--color-bg-btn);
+}
+
+h1,
+h2 {
+  font-size: 2rem;
+  font-weight: 500;
+}
+
+p {
+  font-weight: 400;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-inline: 2rem;
+  height: 3rem;
+}
+
+.header__link {
+}
+
+.header__link:hover {
+}
+
+.link__title {
+}
+
+.header__list {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.header__item {
+}
+
+.item__link {
+}
+
+.main {
+  width: 100%;
+  height: 100%;
+}
+
+.drum__list {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 3rem;
+	padding: 1rem;
+  width: 100%;
+  height: 100%;
+  background: url("../assets/background.jpg") center/cover no-repeat;
+}
+
+.drum__item {
+	flex: 1;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.drum__item-btn {
+	display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+	width: 100%;
+	max-width: 100px;
+  border-radius: var(--border-radius);
+}
+
+.drum__item-title {
+}
+
+.drum__item-paragraph {
+}
+
+.footer {
+  height: 3rem;
+}
