@@ -16,6 +16,8 @@ const BUTTONS = [
   },
 ];
 
+const soundMap = new Map();
+
 const drawButton = (button) => {
   return `<li class="drum__item flex">
 						<button class="drum__item-btn flex">
@@ -31,23 +33,35 @@ const drawInterface = () => {
 
   for (const btn of BUTTONS) {
     template.innerHTML = drawButton(btn).trim();
-    createButton(template.content, btn.urlSound);
+    createButton(template.content, btn);
     btnList.appendChild(template.content);
   }
 };
 
-const createButton = (template, sound) => {
-  const audio = new Audio(sound);
+const createButton = (template, buttonData) => {
+  const audio = new Audio(buttonData.urlSound);
   const button = template.querySelector(".drum__item-btn");
+
+  soundMap.set(buttonData.title.toLowerCase(), { audio, button });
+
   button.addEventListener("click", () => {
-    audio.volume = 0.5;
-    audio.currentTime = 0;
-  audio.play();
+    playSound(audio, button);
   });
 };
 
-document.addEventListener('keydown', () => {
-	
+const playSound = (audio, button) => {
+  audio.volume = 0.5;
+  audio.currentTime = 0;
+  audio.play();
+};
+
+document.addEventListener("keydown", (e) => {
+  const key = e.key.toLowerCase();
+  const item = soundMap.get(key);
+
+  if (item) {
+    playSound(item.audio, item.button);
+  }
 });
 
 const main = () => {
