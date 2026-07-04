@@ -74,8 +74,12 @@ button:hover {
 
 h1,
 h2 {
-  font-size: 2rem;
+  font-size: clamp(1rem, 4vw, 2.5rem);
   font-weight: 500;
+}
+
+h2 {
+  font-size: 2rem;
 }
 
 p {
@@ -83,7 +87,7 @@ p {
 }
 
 .flex {
-	display: flex;
+  display: flex;
   align-items: center;
   justify-content: center;
 }
@@ -121,7 +125,6 @@ p {
 
 .drum__item-btn {
   flex-direction: column;
-  width: 100%;
-  max-width: 100px;
+  min-width: 100px;
   border-radius: var(--border-radius);
 }
